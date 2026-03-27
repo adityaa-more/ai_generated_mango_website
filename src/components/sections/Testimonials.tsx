@@ -26,13 +26,11 @@ export default function Testimonials() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-            <div className="bg-white px-6 py-3 rounded-2xl border border-cream shadow-sm flex items-center gap-3 animate-bounce-subtle">
-              <span className="text-2xl">📦</span>
-              <span className="font-bold text-brown">{t('testimonials.stat1')}</span>
+            <div className="bg-white px-6 py-3 rounded-2xl border border-cream shadow-sm flex items-center justify-center min-w-[120px]">
+              <span className="font-bold text-brown text-sm">{t('testimonials.stat1')}</span>
             </div>
-            <div className="bg-white px-6 py-3 rounded-2xl border border-cream shadow-sm flex items-center gap-3 animate-bounce-subtle">
-              <span className="text-2xl">⭐</span>
-              <span className="font-bold text-brown">{t('testimonials.stat2')}</span>
+            <div className="bg-white px-6 py-3 rounded-2xl border border-cream shadow-sm flex items-center justify-center min-w-[120px]">
+              <span className="font-bold text-brown text-sm">{t('testimonials.stat2')}</span>
             </div>
           </div>
         </div>
@@ -52,8 +50,7 @@ export default function Testimonials() {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-brown/40 z-0 bg-leaf/5">
-                  <span className="text-4xl mb-3">📸</span>
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-brown/20 z-0 bg-leaf/5">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-center px-6 leading-relaxed">
                     Customer Photo
                   </span>

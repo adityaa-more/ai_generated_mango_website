@@ -12,7 +12,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import UrgencyCTA from "@/components/sections/UrgencyCTA";
 import Footer from "@/components/sections/Footer";
 import FloatingWA from "@/components/ui/FloatingWA";
-import MobileStickyCTA from "@/components/ui/MobileStickyCTA";
+
 
 export default function Home() {
   return (
@@ -60,7 +60,7 @@ export default function Home() {
 
       {/* 12. Floating WhatsApp Button & Mobile Bar */}
       <FloatingWA />
-      <MobileStickyCTA />
+
     </div>
   );
 }

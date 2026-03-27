@@ -11,7 +11,6 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-mango/20">
       <Container className="flex items-center justify-between py-4">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">🥭</span>
           <span className="text-xl font-bold font-serif text-brown tracking-tight">Sai Samarth</span>
         </div>
         
@@ -22,30 +21,21 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="flex items-center bg-cream/50 rounded-full px-1 py-1 border border-cream h-9">
-            <button 
-              onClick={() => setLanguage('en')}
-              className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${language === 'en' ? 'bg-mango text-brown shadow-sm' : 'text-brown/40 hover:text-brown/70'}`}
-            >
-              EN
+          <div className="relative group">
+            <button className="flex items-center gap-1.5 bg-cream/50 hover:bg-cream rounded-full px-4 py-1.5 border border-cream transition-all text-[11px] font-bold text-brown">
+              <span>{language === 'en' ? 'EN' : language === 'mr' ? 'मराठी' : 'हिंदी'}</span>
+              <span className="text-[8px] opacity-40">▼</span>
             </button>
-            <button 
-              onClick={() => setLanguage('mr')}
-              className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${language === 'mr' ? 'bg-mango text-brown shadow-sm' : 'text-brown/40 hover:text-brown/70'}`}
-            >
-              मराठी
-            </button>
-            <button 
-              onClick={() => setLanguage('hi')}
-              className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${language === 'hi' ? 'bg-mango text-brown shadow-sm' : 'text-brown/40 hover:text-brown/70'}`}
-            >
-              हिंदी
-            </button>
+            <div className="absolute right-0 top-full mt-2 w-24 bg-white border border-cream rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60] overflow-hidden">
+              <button onClick={() => setLanguage('en')} className="w-full px-4 py-2 text-left text-[11px] font-bold hover:bg-mango/10 transition-colors border-b border-cream/30">EN</button>
+              <button onClick={() => setLanguage('mr')} className="w-full px-4 py-2 text-left text-[11px] font-bold hover:bg-mango/10 transition-colors border-b border-cream/30">मराठी</button>
+              <button onClick={() => setLanguage('hi')} className="w-full px-4 py-2 text-left text-[11px] font-bold hover:bg-mango/10 transition-colors">हिंदी</button>
+            </div>
           </div>
 
           <a 
-            href="https://wa.me/919021484830?text=Hi, I came from your website. I want to order mangoes. 🥭" 
-            className="bg-leaf text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition-all shadow-md text-sm"
+            href="https://wa.me/919021484830?text=Hi, I came from your website. I want to order mangoes." 
+            className="hidden md:inline-flex bg-leaf text-white px-5 py-2 rounded-full font-semibold hover:scale-105 transition-all shadow-md text-xs whitespace-nowrap"
           >
             {t('nav.order')}
           </a>

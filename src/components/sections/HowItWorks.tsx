@@ -9,10 +9,10 @@ export default function HowItWorks() {
   const { t } = useLanguage();
 
   const steps = [
-    { number: "01", icon: "🥭", ...t('howItWorks.steps')[0] },
-    { number: "02", icon: "💬", ...t('howItWorks.steps')[1] },
-    { number: "03", icon: "✅", ...t('howItWorks.steps')[2] },
-    { number: "04", icon: "🚚", ...t('howItWorks.steps')[3] },
+    { number: "01", ...t('howItWorks.steps')[0] },
+    { number: "02", ...t('howItWorks.steps')[1] },
+    { number: "03", ...t('howItWorks.steps')[2] },
+    { number: "04", ...t('howItWorks.steps')[3] },
   ];
 
   return (
@@ -29,8 +29,8 @@ export default function HowItWorks() {
           
           {steps.map((step, i) => (
             <div key={i} className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-[#FFF8E7] border-4 border-mango rounded-full flex items-center justify-center text-3xl mb-6 shadow-md shadow-mango/10 group-hover:scale-110 transition-transform">
-                {step.icon}
+              <div className="w-16 h-16 bg-[#FFF8E7] border-2 border-mango rounded-full flex items-center justify-center text-xl font-bold mb-6 shadow-sm shadow-mango/5 group-hover:bg-mango group-hover:text-brown transition-all duration-300">
+                {step.number}
               </div>
               <div className="text-leaf font-bold mb-2 tracking-widest">{step.number}</div>
               <h3 className="text-xl font-bold mb-3">{step.t}</h3>

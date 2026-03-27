@@ -8,10 +8,10 @@ export default function WhyChooseUs() {
   const { t } = useLanguage();
 
   const points = [
-    { icon: "☀️", ...t('whyUs.points')[0] },
-    { icon: "🚜", ...t('whyUs.points')[1] },
-    { icon: "👌", ...t('whyUs.points')[2] },
-    { icon: "💰", ...t('whyUs.points')[3] },
+    { ...t('whyUs.points')[0] },
+    { ...t('whyUs.points')[1] },
+    { ...t('whyUs.points')[2] },
+    { ...t('whyUs.points')[3] },
   ];
 
   return (
@@ -26,13 +26,10 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {points.map((point, i) => (
-            <div 
-              key={i} 
-              className="bg-white p-6 rounded-3xl shadow-sm border border-cream hover:shadow-md transition-shadow flex flex-col items-center text-center"
-            >
-              <div className="text-4xl mb-4 bg-cream/30 w-16 h-16 flex items-center justify-center rounded-2xl">
-                {point.icon}
-              </div>
+              <div 
+                key={i} 
+                className="bg-white p-8 rounded-3xl shadow-sm border border-cream hover:shadow-md transition-shadow flex flex-col items-center text-center"
+              >
               <h3 className="text-sm md:text-lg font-bold mb-1 text-brown leading-tight">
                 {point.t}
               </h3>
@@ -49,7 +46,6 @@ export default function WhyChooseUs() {
             href="https://wa.me/919021484830?text=Hi, I came from your website. I'm interested in ordering fresh mangoes after reading why you are the best!"
             className="inline-flex items-center gap-3 bg-leaf text-white font-bold py-5 px-12 rounded-2xl shadow-xl hover:scale-105 transition-all text-xl"
           >
-            <span className="text-2xl">🥭</span>
             {t('whyUs.cta')}
           </a>
         </div>

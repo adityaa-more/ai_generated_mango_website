@@ -8,9 +8,9 @@ export default function TargetAudience() {
   const { t } = useLanguage();
 
   const audiences = [
-    { icon: "👨‍👩‍👧‍👦", title: t('audience.families'), desc: t('recommendation.family') },
-    { icon: "🎁", title: t('audience.gifting'), desc: t('recommendation.gifting') },
-    { icon: "🏢", title: t('audience.bulk'), desc: t('recommendation.save') },
+    { title: t('audience.families'), desc: t('recommendation.family') },
+    { title: t('audience.gifting'), desc: t('recommendation.gifting') },
+    { title: t('audience.bulk'), desc: t('recommendation.save') },
   ];
 
   return (
@@ -22,7 +22,6 @@ export default function TargetAudience() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {audiences.map((aud, i) => (
             <div key={i} className="flex flex-col items-center p-8 bg-cream/30 rounded-3xl border border-cream shadow-sm hover:shadow-md transition-all">
-              <span className="text-5xl mb-4">{aud.icon}</span>
               <h3 className="text-xl font-bold text-brown mb-2">{aud.title}</h3>
               <p className="text-brown/60 text-sm text-center">{aud.desc}</p>
             </div>

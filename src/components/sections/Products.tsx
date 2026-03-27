@@ -71,25 +71,28 @@ export default function Products() {
                   const isBestValue = option.label.includes("Peti") || option.secondary;
                   
                   return (
-                    <div key={idx} className={`flex flex-col gap-1 p-2 rounded-2xl transition-all ${isBestValue ? "bg-mango/20 border-2 border-mango shadow-sm" : ""}`}>
+                    <div key={idx} className={`flex flex-col gap-1 p-3 rounded-2xl transition-all ${isBestValue ? "bg-white border border-leaf/20 shadow-sm" : ""}`}>
                       {isBestValue && (
-                        <span className="text-[10px] font-black text-brown uppercase tracking-[0.2em] mb-1">
-                          👑 {t('products.bestValue')}
-                        </span>
+                        <div className="flex items-center gap-1.5 mb-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-leaf"></span>
+                          <span className="text-[10px] font-bold text-leaf uppercase tracking-widest">
+                            {t('products.bestValue')}
+                          </span>
+                        </div>
                       )}
                       {option.highlight && (
-                        <span className="text-[10px] font-bold text-leaf uppercase tracking-wider">
+                        <span className="text-[10px] font-bold text-brown/40 uppercase tracking-wider mb-0.5">
                           {option.highlight}
                         </span>
                       )}
                       <a
                         href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(option.msg)}`}
-                        className={`w-full py-4 rounded-xl font-bold text-sm transition-all shadow-sm ${
+                        className={`w-full py-3.5 rounded-xl font-bold text-sm transition-all ${
                           isBestValue 
-                            ? "bg-mango text-brown hover:bg-mango/90 scale-105" 
+                            ? "bg-leaf text-white hover:bg-leaf/90" 
                             : option.highlight
-                              ? "bg-leaf text-white hover:bg-leaf/90"
-                              : "bg-white text-brown border border-cream hover:bg-cream/20"
+                              ? "bg-brown text-white hover:bg-brown/90"
+                              : "bg-white text-brown border border-cream hover:bg-cream/10"
                         }`}
                       >
                         {option.label}

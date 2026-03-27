@@ -11,44 +11,44 @@ export const translations = {
       order: "Order Now"
     },
     hero: {
-      badge: "⭐ 1000+ Happy Customers",
+      badge: "1000+ Happy Customers",
       title: "Rasdar Ratnagiri Mangoes, Direct from Farm",
       subtitle: "Naturally ripened • No chemicals • Delivered in 2–6 days across India",
-      cta: "Order Mangoes on WhatsApp 🍃",
-      urgency1: "⚡ Limited seasonal stock",
-      urgency2: "🚚 Delivering across India in 2–6 days",
-      waMsg: "Hi, I came from your website. I want to order mangoes. 🥭"
+      cta: "Order Mangoes on WhatsApp",
+      urgency1: "Limited seasonal stock",
+      urgency2: "Delivering across India in 2–6 days",
+      waMsg: "Hi, I came from your website. I want to order mangoes."
     },
     trust: {
       chemFree: "Chemical-Free",
       direct: "Direct from Farmers",
       fresh: "Fresh Packing",
       delivery: "Pan India Delivery",
-      quality: "✔ Fresh & quality checked before delivery",
-      support: "✔ WhatsApp support available"
+      quality: "Quality checked before delivery",
+      support: "WhatsApp support available"
     },
     products: {
       title: "Our Premium Selection",
-      trust: "💰 Farm-direct pricing",
+      trust: "Farm-direct pricing",
       bestValue: "Best Value",
       alphonso: {
         title: "Alphonso (Hapus)",
         desc: "The King of Mangoes from Ratnagiri. Creamy, pulpy & naturally sweet.",
-        dozen1: "🟢 Buy 1 Dozen (Quick Order)",
+        dozen1: "Buy 1 Dozen",
         dozen1Msg: "Hi, I came from your website. I want to order Alphonso Mango - 1 Dozen. Please share details.",
         dozen2: "Order 2 Dozen",
         dozen2Msg: "Hi, I came from your website. I want to order Alphonso Mango - 2 Dozens. Please share details.",
-        peti: "🟡 Best Value → Buy Peti & Save",
+        peti: "Buy Peti & Save",
         petiMsg: "Hi, I want to order Alphonso Mango - 1 Peti. Please share details.",
-        family: "Family of 4? → 2 Dozen",
-        best: "Best Value → Peti"
+        family: "Family of 4?",
+        best: "Best Value"
       },
       pairi: {
         title: "Pairi Mango",
         desc: "Traditional juicy mango, perfect for Aamras. Aroma like no other.",
-        dozen1: "🟢 Buy 1 Dozen (Quick Order)",
-        dozen1Msg: "Hi, I want to order Pairi Mango - 1 Dozen. Please share details.",
-        peti: "🟡 Best Value → Buy Peti & Save",
+        dozen1: "Buy 1 Dozen",
+        dozen1Msg: "Hi, I came from your website. I want to order Pairi Mango - 1 Dozen. Please share details.",
+        peti: "Buy Peti & Save",
         petiMsg: "Hi, I came from your website. I want to order Pairi Mango - 1 Peti. Please share details.",
         best: "Best for Aamras"
       }
@@ -58,7 +58,7 @@ export const translations = {
       family: "Family of 4",
       gifting: "Gifting",
       save: "Save more",
-      cta: "Chat on WhatsApp 🍃",
+      cta: "Chat on WhatsApp",
       helpText: "Hi, I came from your website. I'm not sure how many mangoes I should order. Can you help me decide?"
     },
     audience: {
@@ -86,9 +86,9 @@ export const translations = {
       text4: "So we decided to bring the sweetness of Konkan to homes across India.",
       text5: "Every mango you receive is handpicked, carefully packed, and delivered with the same love as if it were for our own family.",
       text6: "Because for us, it's not just mangoes. It's a feeling of summer, nostalgia, and joy.",
-      readMore: "Read More ↓",
-      readLess: "Read Less ↑",
-      cta: "Plan Your Mango Batch →"
+      readMore: "Read More",
+      readLess: "Read Less",
+      cta: "Plan Your Mango Batch"
     },
     howItWorks: {
       title: "How It Works",
@@ -99,13 +99,13 @@ export const translations = {
         { t: "Confirm Order", d: "Share your details and finalize your quantity." },
         { t: "Home Delivery", d: "Get fresh mangoes delivered in 2-6 days." }
       ],
-      cta: "Start Your Order ✨"
+      cta: "Start Your Order"
     },
     testimonials: {
       title: "Happy Customers",
       subtitle: "Our mangoes speak for themselves. Here's what people across India are saying.",
-      stat1: "📦 500+ boxes delivered last season",
-      stat2: "⭐ Loved by families across India",
+      stat1: "500+ boxes delivered last season",
+      stat2: "Loved by families across India",
       verified: "Verified Buyer",
       items: [
         {
@@ -129,17 +129,17 @@ export const translations = {
       title: "Mango season is short!",
       banner: "Mango season is limited. Order before stock runs out.",
       subtitle: "Limited stock from Ratnagiri farms.",
-      cta: "Order Now on WhatsApp →"
+      cta: "Order Now on WhatsApp"
     },
     footer: {
       brand: "Sai Samarth Mangoes",
       delivery: "Pan India Delivery",
       whatsapp: "9021484830",
-      email: "Saisamarthmangoes@gmail.com",
+      email: "saisamarthmangoes@gmail.com",
       copyright: "All rights reserved."
     },
     sticky: {
-      cta: "Order Mangoes on WhatsApp 🍃"
+      cta: "Order Mangoes on WhatsApp"
     },
     floating: {
       label: "Chat to Order"
@@ -155,44 +155,44 @@ export const translations = {
       order: "आत्ताच ऑर्डर करा"
     },
     hero: {
-      badge: "⭐ १०००+ आनंदी ग्राहक",
+      badge: "१०००+ आनंदी ग्राहक",
       title: "रसरशीत रत्नागिरी हापूस, थेट बागेतून",
       subtitle: "नैसर्गिकरीत्या पिकवलेले • कोणतेही रसायन नाही • संपूर्ण भारतात २–६ दिवसांत डिलिव्हरी",
-      cta: "व्हॉट्सॲपवर आंबे ऑर्डर करा 🍃",
-      urgency1: "⚡ मर्यादित हंगामी साठा",
-      urgency2: "🚚 २–६ दिवसांत संपूर्ण भारत डिलिव्हरी",
-      waMsg: "नमस्कार, मी तुमच्या वेबसाइटवरून आलो/आले आहे. मला आंबे ऑर्डर करायचे आहेत. 🥭"
+      cta: "व्हॉट्सॲपवर आंबे ऑर्डर करा",
+      urgency1: "मर्यादित हंगामी साठा",
+      urgency2: "२–६ दिवसांत संपूर्ण भारत डिलिव्हरी",
+      waMsg: "नमस्कार, मी तुमच्या वेबसाइटवरून आलो/आले आहे. मला आंबे ऑर्डर करायचे आहेत."
     },
     trust: {
       chemFree: "रसायनमुक्त",
       direct: "थेट शेतकऱ्यांकडून",
       fresh: "ताजी पॅकिंग",
       delivery: "संपूर्ण भारत डिलिव्हरी",
-      quality: "✔ डिलिव्हरीपूर्वी ताजेपणा आणि गुणवत्तेची तपासणी",
-      support: "✔ व्हॉट्सॲप सपोर्ट उपलब्ध"
+      quality: "डिलिव्हरीपूर्वी तपासणी",
+      support: "व्हॉट्सॲप सपोर्ट उपलब्ध"
     },
     products: {
       title: "आमची खास निवड",
-      trust: "💰 थेट बागेतील दर",
+      trust: "थेट बागेतील दर",
       bestValue: "सर्वोत्तम दर",
       alphonso: {
         title: "हापूस (रत्नागिरी)",
-        desc: "रत्नागिरीचा फळांचा राजा. नैसर्गिकरीत्या गोड आणि रसरशीत.",
-        dozen1: "🟢 १ डझन खरेदी करा (जलद ऑर्डर)",
+        desc: "रत्नागिरीचा हापूस. नैसर्गिकरीत्या गोड आणि रसरशीत.",
+        dozen1: "१ डझन खरेदी करा",
         dozen1Msg: "नमस्कार, मी तुमच्या वेबसाइटवरून आलो/आले आहे. मला १ डझन रत्नागिरी हापूस आंबे ऑर्डर करायचे आहेत.",
         dozen2: "२ डझन ऑर्डर करा",
         dozen2Msg: "नमस्कार, मी तुमच्या वेबसाइटवरून आलो/आले आहे. मला २ डझन रत्नागिरी हापूस आंबे ऑर्डर करायचे आहेत.",
-        peti: "🟡 सर्वोत्तम दर → पेटी खरेदी करा आणि वाचवा",
+        peti: "पेटी खरेदी करा आणि वाचवा",
         petiMsg: "Hi, I want to order Alphonso Mango - 1 Peti. Please share details.",
-        family: "४ जणांचे कुटुंब? → २ डझन",
-        best: "सर्वोत्तम दर → पेटी"
+        family: "४ जणांचे कुटुंब?",
+        best: "सर्वोत्तम दर"
       },
       pairi: {
         title: "पायरी आंबा",
         desc: "आमरसासाठी सर्वोत्तम. अतुलनीय सुगंध आणि चव.",
-        dozen1: "🟢 १ डझन खरेदी करा (जलद ऑर्डर)",
+        dozen1: "१ डझन खरेदी करा",
         dozen1Msg: "Hi, I want to order Pairi Mango - 1 Dozen. Please share details.",
-        peti: "🟡 सर्वोत्तम दर → पेटी खरेदी करा आणि वाचवा",
+        peti: "पेटी खरेदी करा आणि वाचवा",
         petiMsg: "नमस्कार, मी तुमच्या वेबसाइटवरून आलो/आले आहे. मला १ पेटी पायरी आंबे ऑर्डर करायचे आहेत.",
         best: "आमरसासाठी उत्तम"
       }
@@ -202,7 +202,7 @@ export const translations = {
       family: "४ जणांचे कुटुंब",
       gifting: "भेट देण्यासाठी",
       save: "जास्त बचत",
-      cta: "व्हॉट्सॲपवर चॅट करा 🍃",
+      cta: "व्हॉट्सॲपवर चॅट करा",
       helpText: "नमस्कार, मी तुमच्या वेबसाइटवरून आलो/आले आहे. मला किती आंबे ऑर्डर करावेत हे समजत नाहीये. मदत करा."
     },
     audience: {
@@ -224,15 +224,15 @@ export const translations = {
     farmStory: {
       badge: "आमचा प्रवास",
       title: "रत्नागिरीतून प्रेमासह",
-      text1: "रत्नागिरीच्या हिरव्यागार बागांमध्ये, जिथे समुद्राची हवाและ सुपीक माती मिळते, तिथे आमचे शेतकरी पिढ्यानपिढ्या आंबे पिकवत आहेत.",
+      text1: "रत्नागिरीच्या हिरव्यागार बागांमध्ये, जिथे समुद्राची हवा आणि सुपीक माती मिळते, तिथे आमचे शेतकरी पिढ्यानपिढ्या आंबे पिकवत आहेत.",
       text2: "साई समर्थ मॅंगोजमध्ये, आम्ही या शेतकऱ्यांशी थेट जोडले गेलो आहोत जेणेकरून तुम्हाला नैसर्गिकरीत्या पिकवलेले, रसायनमुक्त आणि अस्सल चवीचे आंबे मिळतील.",
       text3: "आमचा प्रवास एका साध्या विचाराने सुरू झाला. कॉर्पोरेट जगात अनेक वर्षे घालवल्यानंतर, आम्हाला पुन्हा निसर्गाशी आणि शुद्धतेशी जोडले जायचे होते.",
       text4: "आणि म्हणूनच आम्ही कोकणचा गोडवा संपूर्ण भारतातील घराघरांत पोहोचवण्याचा निर्णय घेतला.",
       text5: "तुम्हा मिळणारा प्रत्येक आंबा स्वहस्ते निवडलेला, काळजीपूर्वक पॅक केलेला आणि स्वतःच्या कुटुंबासाठी असल्यासारखा प्रेमाने पाठवला जातो.",
       text6: "कारण आमच्यासाठी हे फक्त आंबे नाहीत, तर ही उन्हाळ्याची आठवण, नॉस्टॅल्जिया आणि आनंद आहे.",
-      readMore: "अधिक वाचा ↓",
-      readLess: "कमी वाचा ↑",
-      cta: "तुमच्या आंब्याची योजना करा →"
+      readMore: "अधिक वाचा",
+      readLess: "कमी वाचा",
+      cta: "तुमच्या आंब्याची योजना करा"
     },
     howItWorks: {
       title: "ऑर्डर कशी करावी?",
@@ -243,13 +243,13 @@ export const translations = {
         { t: "ऑर्डर कन्फर्म करा", d: "तुमचा पत्ता आणि प्रमाण सांगा." },
         { t: "होम डिलिव्हरी", d: "२-६ दिवसांत ताजे आंबे घरपोहच मिळवा." }
       ],
-      cta: "ऑर्डर सुरू करा ✨"
+      cta: "ऑर्डर सुरू करा"
     },
     testimonials: {
       title: "आनंदी ग्राहक",
       subtitle: "आमच्या आंब्यांची चवच सर्व काही सांगते. संपूर्ण भारतातील ग्राहकांचे काय म्हणणे आहे ते पहा.",
-      stat1: "📦 गेल्या हंगामात ५००+ बॉक्स पाठवले",
-      stat2: "⭐ संपूर्ण भारतातील कुटुंबांचे प्रेम",
+      stat1: "गेल्या हंगामात ५००+ बॉक्स पाठवले",
+      stat2: "संपूर्ण भारतातील कुटुंबांचे प्रेम",
       verified: "खात्रीशीर खरेदीदार",
       items: [
         {
@@ -273,17 +273,17 @@ export const translations = {
       title: "आंब्यांचा हंगाम संपत आला आहे!",
       banner: "आंब्याचा हंगाम मर्यादित आहे. स्टॉक संपण्यापूर्वी ऑर्डर करा.",
       subtitle: "रत्नागिरी बागेतून मर्यादित स्टॉक उपलब्ध.",
-      cta: "व्हॉट्सॲपवर आत्ताच ऑर्डर करा →"
+      cta: "व्हॉट्सॲपवर आत्ताच ऑर्डर करा"
     },
     footer: {
       brand: "साई समर्थ मॅंगोज",
       delivery: "संपूर्ण भारत डिलिव्हरी",
       whatsapp: "9021484830",
-      email: "Saisamarthmangoes@gmail.com",
+      email: "saisamarthmangoes@gmail.com",
       copyright: "सर्वाधिकार सुरक्षित."
     },
     sticky: {
-      cta: "व्हॉट्सॲपवर आंबे ऑर्डर करा 🍃"
+      cta: "व्हॉट्सॲपवर आंबे ऑर्डर करा"
     },
     floating: {
       label: "ऑर्डरसाठी चॅट करा"
@@ -299,44 +299,44 @@ export const translations = {
       order: "अभी ऑर्डर करें"
     },
     hero: {
-      badge: "⭐ 1000+ खुशहाल ग्राहक",
+      badge: "1000+ खुशहाल ग्राहक",
       title: "रसीले रत्नागिरी आम, सीधे खेत से",
       subtitle: "प्राकृतिक रूप से पके हुए • कोई रसायन नहीं • पूरे भारत में 2–6 दिनों में डिलीवरी",
-      cta: "व्हाट्सएप पर आम ऑर्डर करें 🍃",
-      urgency1: "⚡ सीमित मौसमी स्टॉक",
-      urgency2: "🚚 2–6 दिनों में पूरे भारत में डिलीवरी",
-      waMsg: "नमस्ते, मैं आपकी वेबसाइट से आया/आई हूँ। मुझे आम ऑर्डर करना है। 🥭"
+      cta: "व्हाट्सएप पर आम ऑर्डर करें",
+      urgency1: "सीमित मौसमी स्टॉक",
+      urgency2: "2–6 दिनों में पूरे भारत में डिलीवरी",
+      waMsg: "नमस्ते, मैं आपकी वेबसाइट से आया/आई हूँ। मुझे आम ऑर्डर करना है।"
     },
     trust: {
       chemFree: "रसायन मुक्त",
       direct: "सीधे किसानों से",
       fresh: "ताजी पैकिंग",
       delivery: "पूरे भारत में डिलीवरी",
-      quality: "✔ डिलीवरी से पहले ताज़गी और गुणवत्ता की जांच",
-      support: "✔ व्हाट्सएप सपोर्ट उपलब्ध"
+      quality: "डिलीवरी से पहले जांच",
+      support: "व्हाट्सएप सपोर्ट उपलब्ध"
     },
     products: {
       title: "हमारी प्रीमियम पसंद",
-      trust: "💰 सीधे खेत की कीमतें",
+      trust: "सीधे खेत की कीमतें",
       bestValue: "सबसे अच्छी बचत",
       alphonso: {
         title: "हापुस (रत्नागिरी)",
-        desc: "रत्नागिरी का फलों का राजा। प्राकृतिक रूप से मीठा और रसीला।",
-        dozen1: "🟢 1 दर्जन खरीदें (त्वरित ऑर्डर)",
+        desc: "रत्नागिरी का हापुस। प्राकृतिक रूप से मीठा और रसीला.",
+        dozen1: "1 दर्जन खरीदें",
         dozen1Msg: "नमस्ते, मैं आपकी वेबसाइट से आया/आई हूँ। मुझे 1 दर्जन रत्नागिरी हापुस आम ऑर्डर करने हैं।",
         dozen2: "2 दर्जन ऑर्डर करें",
         dozen2Msg: "नमस्ते, मैं आपकी वेबसाइट से आया/आई हूँ। मुझे 2 दर्जन रत्नागिरी हापुस आम ऑर्डर करने हैं।",
-        peti: "🟡 सबसे अच्छी बचत → पेटी खरीदें और बचाएं",
+        peti: "पेटी खरीदें और बचाएं",
         petiMsg: "Hi, I want to order Alphonso Mango - 1 Peti. Please share details.",
-        family: "4 लोगों का परिवार? → 2 दर्जन",
-        best: "सबसे अच्छी कीमत → पेटी"
+        family: "4 लोगों का परिवार?",
+        best: "सबसे अच्छी कीमत"
       },
       pairi: {
         title: "पायरी आम",
-        desc: "आमरस के लिए सबसे अच्छा। बेहतरीन खुशबू और स्वाद।",
-        dozen1: "🟢 1 दर्जन खरीदें (त्वरित ऑर्डर)",
+        desc: "आमरस के लिए सबसे अच्छा। बेहतरीन खुशबू और स्वाद.",
+        dozen1: "1 दर्जन खरीदें",
         dozen1Msg: "Hi, I want to order Pairi Mango - 1 Dozen. Please share details.",
-        peti: "🟡 सबसे अच्छी बचत → पेटी खरीदें और बचाएं",
+        peti: "पेटी खरीदें और बचाएं",
         petiMsg: "नमस्ते, मैं आपकी वेबसाइट से आया/आई हूँ। मुझे 1 पेटी पायरी आम ऑर्डर करनी है।",
         best: "आमरस के लिए उत्तम"
       }
@@ -346,7 +346,7 @@ export const translations = {
       family: "4 लोगों का परिवार",
       gifting: "उपहार के लिए",
       save: "ज्यादा बचत",
-      cta: "व्हाट्सएप पर चैट करें 🍃",
+      cta: "व्हाट्सएप पर चैट करें",
       helpText: "नमस्ते, मैं आपकी वेबसाइट से आया/आई हूँ। मुझे समझ नहीं आ रहा कि कितने आम ऑर्डर करूँ। मदद करें।"
     },
     audience: {
@@ -374,9 +374,9 @@ export const translations = {
       text4: "और इसीलिए हमने कोंकण की मिठास पूरे भारत के घरों तक पहुँचाने का फैसला किया।",
       text5: "आपको मिलने वाला हर आम हाथ से चुना हुआ, सावधानी से पैक किया हुआ और अपने परिवार के लिए होने जैसे प्यार से भेजा जाता है।",
       text6: "क्योंकि हमारे लिए ये सिर्फ आम नहीं हैं, ये गर्मियों की यादें, नॉस्टेल्जिया और खुशी हैं।",
-      readMore: "और पढ़ें ↓",
-      readLess: "कम पढ़ें ↑",
-      cta: "अपने आम की योजना बनाएं →"
+      readMore: "और पढ़ें",
+      readLess: "कम पढ़ें",
+      cta: "अपने आम की योजना बनाएं"
     },
     howItWorks: {
       title: "ऑर्डर कैसे करें?",
@@ -387,13 +387,13 @@ export const translations = {
         { t: "ऑर्डर कंफर्म करें", d: "अपना पता और मात्रा बताएं।" },
         { t: "होम डिलीवरी", d: "2-6 दिनों में ताजे आम घर पहुँचें।" }
       ],
-      cta: "ऑर्डर शुरू करें ✨"
+      cta: "ऑर्डर शुरू करें"
     },
     testimonials: {
       title: "खुशहाल ग्राहक",
-      subtitle: "हमारे आमों का स्वाद ही सब कुछ कह देता है। पूरे भारत के ग्राहकों की राय यहाँ देखें।",
-      stat1: "📦 पिछले सीजन में 500+ बॉक्स डिलीवर किए",
-      stat2: "⭐ पूरे भारत में परिवारों का पसंदीदा",
+      subtitle: "हमारे आमों का स्वाद ही सब कुछ कह देता है। पूरे भारत के ग्राहकों की राय यहाँ देखें.",
+      stat1: "पिछले सीजन में 500+ बॉक्स डिलीवर किए",
+      stat2: "पूरे भारत में परिवारों का पसंदीदा",
       verified: "सत्यापित खरीदार",
       items: [
         {
@@ -417,17 +417,17 @@ export const translations = {
       title: "आम का सीजन खत्म होने वाला है!",
       banner: "आम का सीजन सीमित है। स्टॉक खत्म होने से पहले ऑर्डर करें।",
       subtitle: "रत्नागिरी फार्म से लिमिटेड स्टॉक उपलब्ध।",
-      cta: "व्हाट्सएप पर अभी ऑर्डर करें →"
+      cta: "व्हाट्सएप पर अभी ऑर्डर करें"
     },
     footer: {
       brand: "साई समर्थ मैंगोज़",
       delivery: "पूरे भारत में डिलीवरी",
       whatsapp: "9021484830",
-      email: "Saisamarthmangoes@gmail.com",
+      email: "saisamarthmangoes@gmail.com",
       copyright: "सर्वाधिकार सुरक्षित."
     },
     sticky: {
-      cta: "व्हाट्सएप पर आम ऑर्डर करें 🍃"
+      cta: "व्हाट्सएप पर आम ऑर्डर करें"
     },
     floating: {
       label: "ऑर्डर के लिए चैट करें"

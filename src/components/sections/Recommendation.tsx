@@ -9,9 +9,9 @@ export default function Recommendation() {
   const { t } = useLanguage();
 
   const advice = [
-    { label: t('recommendation.family'), value: t('products.alphonso.dozen2'), emoji: "👨‍👩‍👧‍👦" },
-    { label: t('recommendation.gifting'), value: t('products.alphonso.peti'), emoji: "🎁" },
-    { label: t('recommendation.save'), value: t('products.alphonso.peti'), emoji: "💰" },
+    { label: t('recommendation.family'), value: t('products.alphonso.dozen2') },
+    { label: t('recommendation.gifting'), value: t('products.alphonso.peti') },
+    { label: t('recommendation.save'), value: t('products.alphonso.peti') },
   ];
 
   return (
@@ -26,11 +26,10 @@ export default function Recommendation() {
             {advice.map((item, idx) => (
               <div 
                 key={idx} 
-                className="bg-white p-5 rounded-2xl border border-cream shadow-sm flex flex-col items-center text-center gap-1"
+                className="bg-white p-6 rounded-2xl border border-cream shadow-sm flex flex-col items-center text-center gap-1"
               >
-                <span className="text-2xl mb-1">{item.emoji}</span>
-                <span className="text-xs font-bold text-brown/50 uppercase tracking-widest">{item.label}</span>
-                <span className="text-lg font-bold text-leaf">→ {item.value}</span>
+                <span className="text-xs font-bold text-brown/40 uppercase tracking-widest">{item.label}</span>
+                <span className="text-lg font-bold text-leaf">{item.value}</span>
               </div>
             ))}
           </div>

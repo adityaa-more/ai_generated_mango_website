@@ -74,10 +74,10 @@ export default function Hero() {
         </div>
 
         {/* SECONDARY TRUST STRIP (MINIMAL) */}
-        <div className="flex items-center justify-center gap-4 mt-8 text-brown/50 font-semibold text-xs uppercase tracking-widest">
-          <span>✨ {t('trust.chemFree')}</span>
-          <span className="w-1 h-1 rounded-full bg-brown/20" />
-          <span>🚚 {t('trust.delivery')}</span>
+        <div className="flex items-center justify-center gap-4 mt-8 text-brown/40 font-bold text-[10px] uppercase tracking-[0.2em]">
+          <span>{t('trust.chemFree')}</span>
+          <span className="w-1 h-1 rounded-full bg-brown/10" />
+          <span>{t('trust.delivery')}</span>
         </div>
       </div>
     </section>

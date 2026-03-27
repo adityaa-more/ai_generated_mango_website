@@ -41,7 +41,7 @@ export default function FarmStory() {
                 <p>{t('farmStory.text4')}</p>
                 <p>{t('farmStory.text5')}</p>
                 <p className="italic font-bold text-brown">
-                  {t('farmStory.text6')} 🥭
+                  {t('farmStory.text6')}
                 </p>
               </div>
             </div>
