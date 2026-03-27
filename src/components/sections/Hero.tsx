@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="relative w-72 h-72 md:w-96 md:h-96 mb-8">
           <div className="absolute inset-0 rounded-full bg-mango/20 blur-2xl scale-90 animate-pulse" />
           <Image
-            src="/hero_mango.png"
+            src="/real/WhatsApp Image 2026-03-27 at 10.11.58 AM (1).jpeg"
             alt="Fresh Ratnagiri Alphonso Mango"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

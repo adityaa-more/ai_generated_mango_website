@@ -6,9 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const PLACEHOLDER_IMAGES = [
   "/product_alphonso.png",
-  "/product_kesar.png",
   "/product_langra.png",
-  "/hero_mango.png",
 ];
 
 const CARD_W = 280;   // card width px

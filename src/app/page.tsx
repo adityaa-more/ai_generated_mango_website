@@ -5,6 +5,7 @@ import TrustStrip from "@/components/sections/TrustStrip";
 import Products from "@/components/sections/Products";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FarmStory from "@/components/sections/FarmStory";
+import RealGallery from "@/components/sections/RealGallery";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Testimonials from "@/components/sections/Testimonials";
 import UrgencyCTA from "@/components/sections/UrgencyCTA";
@@ -36,6 +37,9 @@ export default function Home() {
 
         {/* 6. Farm Story */}
         <FarmStory />
+
+        {/* 6b. Real Photo & Video Gallery */}
+        <RealGallery />
 
         {/* 7. How It Works */}
         <HowItWorks />

@@ -1,25 +1,58 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+
+const CAROUSEL_IMAGES = [
+  { src: "/real/WhatsApp Image 2026-03-27 at 10.11.48 AM.jpeg", alt: "Fresh mangoes on a weighing scale" },
+  { src: "/real/WhatsApp Image 2026-03-27 at 10.11.49 AM.jpeg", alt: "Farmer holding a fresh mango at the farm" },
+  { src: "/real/WhatsApp Image 2026-03-27 at 10.11.50 AM.jpeg", alt: "Fresh green mangoes spread on the ground" },
+  { src: "/real/WhatsApp Image 2026-03-27 at 10.11.58 AM (1).jpeg", alt: "Ripe yellow mango held by hand" },
+];
 
 export default function FarmStory() {
   const { t } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-        {/* LEFT: Farmer Illustration */}
-        <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-xl bg-cream/50 flex items-center justify-center group">
-          <Image
-            src="/farmer.png"
-            alt="The Ratnagiri Farmer"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-          />
+        {/* LEFT: Real Photo Carousel */}
+        <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-xl bg-cream/50">
+          {CAROUSEL_IMAGES.map((img, i) => (
+            <div
+              key={i}
+              className={`absolute inset-0 transition-opacity duration-700 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          ))}
+          {/* Dot indicators */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {CAROUSEL_IMAGES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentSlide(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentSlide ? "bg-mango scale-125" : "bg-white/60"}`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* RIGHT: Story Text */}
@@ -54,7 +87,7 @@ export default function FarmStory() {
             </button>
 
             {/* SECTION CTA */}
-            <div className="pt-6">
+            <div className="pt-6 flex justify-center md:justify-start">
               <a
                 href="https://wa.me/919021484830?text=Hi, I came from your website. I read your farm story! I want to order some authentic Ratnagiri mangoes."
                 className="inline-flex items-center gap-3 bg-mango text-brown font-bold py-4 px-10 rounded-2xl shadow-lg hover:rotate-2 transition-all text-lg"
