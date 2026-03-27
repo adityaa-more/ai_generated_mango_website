@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brown mb-2 tracking-tight">
-            {t('whyUs.title')}
+            🌿 {t('whyUs.title')}
           </h2>
           <div className="w-16 h-1 bg-mango mx-auto rounded-full" />
         </div>

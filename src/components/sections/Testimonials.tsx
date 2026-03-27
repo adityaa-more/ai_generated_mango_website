@@ -1,82 +1,149 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
+const PLACEHOLDER_IMAGES = [
+  "/product_alphonso.png",
+  "/product_kesar.png",
+  "/product_langra.png",
+  "/hero_mango.png",
+];
+
+const CARD_W = 280;   // card width px
+const GAP = 16;       // gap px
+const SPEED = 0.6;    // px per frame
+
 export default function Testimonials() {
   const { t } = useLanguage();
+  const [images, setImages] = useState<string[]>([]);
+  const isPaused = useRef(false);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const animRef = useRef<number | null>(null);
+  const posRef = useRef(0);
 
-  const testimonialList = t('testimonials.items').map((item: any, i: number) => ({
-    ...item,
-    rating: 5,
-    image: i === 0 ? "/testimonials/peti1.jpg" : i === 1 ? "/testimonials/delivery1.jpg" : "/testimonials/peti2.jpg"
-  }));
+  // drag/swipe
+  const dragStartX = useRef<number | null>(null);
+  const dragStartPos = useRef(0);
+
+  // Load images from API
+  useEffect(() => {
+    fetch("/api/testimonial-images")
+      .then((r) => r.json())
+      .then((d) => {
+        const imgs: string[] = d.images ?? [];
+        setImages(imgs.length > 0 ? imgs : PLACEHOLDER_IMAGES);
+      })
+      .catch(() => setImages(PLACEHOLDER_IMAGES));
+  }, []);
+
+  // Start animation loop once images are loaded
+  useEffect(() => {
+    if (images.length === 0 || !trackRef.current) return;
+
+    // One "set" = all original images
+    const singleSetW = images.length * (CARD_W + GAP);
+
+    const tick = () => {
+      if (!isPaused.current && dragStartX.current === null) {
+        posRef.current += SPEED;
+        // Reset seamlessly when we've scrolled exactly one set
+        if (posRef.current >= singleSetW) {
+          posRef.current -= singleSetW;
+        }
+      }
+      if (trackRef.current) {
+        trackRef.current.style.transform = `translateX(-${posRef.current}px)`;
+      }
+      animRef.current = requestAnimationFrame(tick);
+    };
+
+    animRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (animRef.current) cancelAnimationFrame(animRef.current);
+    };
+  }, [images]);
+
+  if (images.length === 0) return null;
+
+  // Repeat enough times so we always have content off-screen
+  const copies = Math.max(3, Math.ceil(2400 / (images.length * (CARD_W + GAP))) + 1);
+  const displayImages = Array.from({ length: copies }, () => images).flat();
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    dragStartX.current = e.clientX;
+    dragStartPos.current = posRef.current;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (dragStartX.current === null) return;
+    const dx = dragStartX.current - e.clientX;
+    posRef.current = dragStartPos.current + dx;
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translateX(-${posRef.current}px)`;
+    }
+  };
+
+  const onPointerUp = () => {
+    dragStartX.current = null;
+  };
 
   return (
-    <section id="reviews" className="py-16 md:py-24 bg-[#FFF8E7]">
+    <section id="reviews" className="py-16 md:py-24 bg-[#FFF8E7] overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-brown mb-4 tracking-tight">
-            {t('testimonials.title')}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-brown mb-3 tracking-tight">
+            ⭐ {t("testimonials.title")}
           </h2>
-          <div className="w-16 h-1 bg-mango mx-auto rounded-full mb-6" />
-          <p className="text-brown/70 max-w-xl mx-auto text-lg mb-8">
-            {t('testimonials.subtitle')}
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-            <div className="bg-white px-6 py-3 rounded-2xl border border-cream shadow-sm flex items-center justify-center min-w-[120px]">
-              <span className="font-bold text-brown text-sm">{t('testimonials.stat1')}</span>
-            </div>
-            <div className="bg-white px-6 py-3 rounded-2xl border border-cream shadow-sm flex items-center justify-center min-w-[120px]">
-              <span className="font-bold text-brown text-sm">{t('testimonials.stat2')}</span>
-            </div>
+          <div className="w-16 h-1 bg-mango mx-auto rounded-full mb-5" />
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-white border border-cream px-5 py-2 rounded-2xl text-sm font-bold text-brown shadow-sm">
+              {t("testimonials.stat1")}
+            </span>
+            <span className="bg-white border border-cream px-5 py-2 rounded-2xl text-sm font-bold text-brown shadow-sm">
+              {t("testimonials.stat2")}
+            </span>
           </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonialList.map((testi: any, i: number) => (
-            <div key={i} className="bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden relative flex flex-col group border border-cream">
-              {/* Image Section */}
-              <div className="relative h-56 w-full bg-cream/40 flex items-center justify-center overflow-hidden">
-                <Image 
-                  src={testi.image} 
-                  alt={`Customer photo`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 z-10"
-                  onError={(e: any) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-brown/20 z-0 bg-leaf/5">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-center px-6 leading-relaxed">
-                    Customer Photo
-                  </span>
-                </div>
-              </div>
+      </div>
 
-              {/* Text Section */}
-              <div className="p-8 flex flex-col flex-grow relative">
-                <div className="text-mango text-7xl absolute -top-8 right-6 opacity-20 font-serif leading-none">“</div>
-                
-                <div className="flex gap-1 mb-5">
-                  {[...Array(testi.rating)].map((_, idx) => (
-                    <span key={idx} className="text-mango text-xl">★</span>
-                  ))}
-                </div>
-                
-                <p className="text-brown/80 mb-8 italic leading-relaxed flex-grow text-[15px]">
-                  &quot;{testi.text}&quot;
-                </p>
-                
-                <div className="border-t border-cream pt-5">
-                  <div className="font-bold text-brown text-lg">{testi.name}</div>
-                  <div className="text-[10px] text-leaf uppercase tracking-widest font-bold mt-1">
-                    {t('testimonials.verified')} • {testi.location}
-                  </div>
-                </div>
+      {/* Carousel */}
+      <div
+        className="relative w-full overflow-hidden cursor-grab active:cursor-grabbing select-none"
+        onMouseEnter={() => { isPaused.current = true; }}
+        onMouseLeave={() => { isPaused.current = false; }}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+      >
+        {/* Edge fades */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#FFF8E7] to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#FFF8E7] to-transparent z-10" />
+
+        <div
+          ref={trackRef}
+          className="flex will-change-transform"
+          style={{ gap: GAP, width: "max-content" }}
+        >
+          {displayImages.map((src, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 bg-white rounded-2xl shadow-md flex items-center justify-center overflow-hidden"
+              style={{ width: CARD_W, height: 340 }}
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src={src}
+                  alt={`Customer proof ${(i % images.length) + 1}`}
+                  fill
+                  sizes="280px"
+                  className="object-contain p-3"
+                  draggable={false}
+                  unoptimized
+                />
               </div>
             </div>
           ))}

@@ -14,8 +14,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Fresh Mangoes | Order on WhatsApp",
-  description: "Sweet, juicy, and hand-picked. Get the best mangoes delivered to your doorstep. Fast WhatsApp orders.",
+  title: "Fresh Mangoes | Order on WhatsApp – Sai Samarth",
+  description: "Sweet, juicy, and hand-picked Ratnagiri & Kesar mangoes delivered to your doorstep. Place your order instantly on WhatsApp. Alphonso, Kesar, Langra varieties available.",
+  keywords: ["fresh mangoes", "Ratnagiri Alphonso", "Kesar mango", "order mangoes online", "mangoes WhatsApp", "Sai Samarth"],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  openGraph: {
+    title: "Fresh Mangoes | Sai Samarth",
+    description: "Hand-picked Ratnagiri & Kesar mangoes delivered to your door. Order on WhatsApp — fast & easy.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fresh Mangoes | Sai Samarth",
+    description: "Hand-picked Ratnagiri & Kesar mangoes. Order on WhatsApp!",
+  },
 };
 
 import { LanguageProvider } from "@/context/LanguageContext";

@@ -21,7 +21,7 @@ export default function FarmStory() {
             className="object-cover group-hover:scale-105 transition-transform duration-700"
           />
         </div>
-        
+
         {/* RIGHT: Story Text */}
         <div className="flex flex-col gap-6">
           <div className="inline-block self-start bg-leaf/10 text-leaf px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
@@ -30,11 +30,11 @@ export default function FarmStory() {
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-brown">
             {t('farmStory.title')}
           </h2>
-          
+
           <div className="space-y-4 text-brown/80 leading-relaxed text-base md:text-lg">
             <p>{t('farmStory.text1')}</p>
             <p>{t('farmStory.text2')}</p>
-            
+
             <div className={`overflow-hidden transition-all duration-500 ${isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 md:max-h-none opacity-0 md:opacity-100'}`}>
               <div className="space-y-4 pt-4">
                 <p className="font-semibold text-leaf">{t('farmStory.text3')}</p>
@@ -46,11 +46,11 @@ export default function FarmStory() {
               </div>
             </div>
 
-            <button 
+            <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="md:hidden text-leaf font-bold flex items-center gap-2 mt-2 transition-all"
+              className="md:hidden w-full text-leaf font-bold flex items-center justify-center gap-2 mt-2 transition-all"
             >
-              {isExpanded ? t('farmStory.readLess') : t('farmStory.readMore')}
+              {isExpanded ? `⬆️ ${t('farmStory.readLess')}` : `📖 ${t('farmStory.readMore')}`}
             </button>
 
             {/* SECTION CTA */}

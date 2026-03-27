@@ -3,10 +3,8 @@ import Hero from "@/components/sections/Hero";
 import UrgencyBanner from "@/components/sections/UrgencyBanner";
 import TrustStrip from "@/components/sections/TrustStrip";
 import Products from "@/components/sections/Products";
-import Recommendation from "@/components/sections/Recommendation";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FarmStory from "@/components/sections/FarmStory";
-import TargetAudience from "@/components/sections/TargetAudience";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Testimonials from "@/components/sections/Testimonials";
 import UrgencyCTA from "@/components/sections/UrgencyCTA";
@@ -33,34 +31,29 @@ export default function Home() {
         {/* 4. Products Section */}
         <Products />
 
-        {/* 5. Smart Recommendation Banner */}
-        <Recommendation />
-
-        {/* 6. Why Choose Us */}
+        {/* 5. Why Choose Us */}
         <WhyChooseUs />
 
-        {/* 7. Farm Story */}
+        {/* 6. Farm Story */}
         <FarmStory />
 
-        {/* 7b. Target Audience */}
-        <TargetAudience />
-
-        {/* 8. How It Works */}
+        {/* 7. How It Works */}
         <HowItWorks />
 
-        {/* 9. Testimonials */}
+        {/* 8. Testimonials */}
         <Testimonials />
 
-        {/* 10. Urgency CTA */}
+        {/* 9. Urgency CTA */}
         <UrgencyCTA />
       </main>
 
-      {/* 11. Footer */}
+      {/* 10. Footer */}
       <Footer />
 
-      {/* 12. Floating WhatsApp Button & Mobile Bar */}
+      {/* 11. Floating WhatsApp Button & Mobile Bar */}
       <FloatingWA />
 
     </div>
   );
 }
+

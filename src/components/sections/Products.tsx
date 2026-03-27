@@ -6,104 +6,169 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const WA_NUMBER = "919021484830";
 
+const PRODUCTS = [
+  {
+    id: "alphonso",
+    titleKey: "products.alphonso.title",
+    descKey: "products.alphonso.desc",
+    image: "/product_alphonso.png",
+    badge: "👑 King of Mangoes",
+    trustPoints: ["🌿 Naturally ripened", "🚫 No chemicals", "🧑‍🌾 Farm fresh"],
+    options: [
+      {
+        label: "🟢 Buy 1 Dozen",
+        hint: "Perfect to try",
+        style: "border border-leaf/30 bg-white text-brown hover:bg-leaf/5",
+        msgKey: "products.alphonso.dozen1Msg",
+      },
+      {
+        label: "🟡 Buy 2 Dozen",
+        hint: "👨‍👩‍👧‍👦 Family of 4",
+        style: "border border-mango/40 bg-[#FFF8E7] text-brown hover:bg-mango/20",
+        msgKey: "products.alphonso.dozen2Msg",
+      },
+      {
+        label: "🔥 Best Value → Buy Peti",
+        hint: "🎁 Gifting & Bulk Savings",
+        style: "bg-leaf text-white hover:bg-leaf/90 shadow-lg",
+        isBest: true,
+        msgKey: "products.alphonso.petiMsg",
+      },
+    ],
+  },
+  {
+    id: "pairi",
+    titleKey: "products.pairi.title",
+    descKey: "products.pairi.desc",
+    image: "/product_langra.png",
+    badge: "🥭 Perfect for Aamras",
+    trustPoints: ["🌿 Naturally ripened", "🚫 No chemicals", "🧑‍🌾 Farm fresh"],
+    options: [
+      {
+        label: "🟢 Buy 1 Dozen",
+        hint: "Perfect to try",
+        style: "border border-leaf/30 bg-white text-brown hover:bg-leaf/5",
+        msgKey: "products.pairi.dozen1Msg",
+      },
+      {
+        label: "🔥 Best Value → Buy Peti",
+        hint: "🎁 Gifting & Bulk Savings",
+        style: "bg-leaf text-white hover:bg-leaf/90 shadow-lg",
+        isBest: true,
+        msgKey: "products.pairi.petiMsg",
+      },
+    ],
+  },
+];
+
 export default function Products() {
   const { t } = useLanguage();
 
-  const productData = [
-    {
-      id: "alphonso",
-      name: t('products.alphonso.title'),
-      desc: t('products.alphonso.desc'),
-      image: "/product_alphonso.png",
-      options: [
-        { label: t('products.alphonso.dozen1'), msg: t('products.alphonso.dozen1Msg') },
-        { label: t('products.alphonso.dozen2'), msg: t('products.alphonso.dozen2Msg'), highlight: t('products.alphonso.family') },
-        { label: t('products.alphonso.peti'), msg: t('products.alphonso.petiMsg'), secondary: t('products.alphonso.best') },
-      ],
-    },
-    {
-      id: "pairi",
-      name: t('products.pairi.title'),
-      desc: t('products.pairi.desc'),
-      image: "/product_langra.png", 
-      options: [
-        { label: t('products.pairi.dozen1'), msg: t('products.pairi.dozen1Msg') },
-        { label: t('products.pairi.peti'), msg: t('products.pairi.petiMsg'), secondary: t('products.pairi.best') },
-      ],
-    },
-  ];
-
   return (
     <section id="products" className="py-16 md:py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            {t('products.title')}
+      <div className="max-w-5xl mx-auto px-4">
+
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-brown">
+            {t("products.title")}
           </h2>
-          <p className="text-leaf font-bold flex items-center justify-center gap-2">
-           {t('products.trust')}
+          <p className="text-leaf font-semibold text-sm flex items-center justify-center gap-2">
+            🌾 {t("products.trust")} • Handpicked • Direct from Ratnagiri
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          {productData.map((product) => (
+        {/* Smart Guidance strip */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {[
+            { icon: "👨‍👩‍👧‍👦", label: "Family of 4", rec: "→ 2 Dozen" },
+            { icon: "🎁", label: "Gifting", rec: "→ Peti" },
+            { icon: "💰", label: "Best Value", rec: "→ Peti" },
+          ].map((g) => (
+            <div
+              key={g.label}
+              className="flex items-center gap-2 bg-[#FFF8E7] border border-mango/30 rounded-full px-4 py-2 text-xs font-bold text-brown"
+            >
+              <span>{g.icon}</span>
+              <span>{g.label}</span>
+              <span className="text-leaf">{g.rec}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Product Cards */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {PRODUCTS.map((product) => (
             <div
               key={product.id}
-              className="group bg-[#FFF8E7] rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col items-center text-center relative overflow-hidden"
+              className="bg-[#FFF8E7] rounded-[2.5rem] p-7 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center gap-5"
             >
-              <div className="relative w-48 h-48 mb-6">
+              {/* Badge */}
+              <span className="bg-mango/20 text-brown text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+                {product.badge}
+              </span>
+
+              {/* Image */}
+              <div className="relative w-44 h-44">
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={t(product.titleKey)}
                   fill
-                  sizes="(max-width: 768px) 100vw, 30vw"
-                  className="object-contain drop-shadow-xl group-hover:rotate-6 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-contain drop-shadow-xl hover:rotate-6 transition-transform duration-500"
                 />
               </div>
 
-              <h3 className="text-3xl font-bold mb-3 text-brown">{product.name}</h3>
-              <p className="text-brown/70 mb-8 text-sm leading-relaxed">
-                {product.desc}
-              </p>
+              {/* Title + Desc */}
+              <div>
+                <h3 className="text-2xl font-bold text-brown mb-1">{t(product.titleKey)}</h3>
+                <p className="text-brown/65 text-sm leading-relaxed">{t(product.descKey)}</p>
+              </div>
 
-              <div className="flex flex-col gap-3 w-full">
-                {product.options.map((option, idx) => {
-                  const isBestValue = option.label.includes("Peti") || option.secondary;
-                  
-                  return (
-                    <div key={idx} className={`flex flex-col gap-1 p-3 rounded-2xl transition-all ${isBestValue ? "bg-white border border-leaf/20 shadow-sm" : ""}`}>
-                      {isBestValue && (
-                        <div className="flex items-center gap-1.5 mb-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-leaf"></span>
-                          <span className="text-[10px] font-bold text-leaf uppercase tracking-widest">
-                            {t('products.bestValue')}
-                          </span>
-                        </div>
-                      )}
-                      {option.highlight && (
-                        <span className="text-[10px] font-bold text-brown/40 uppercase tracking-wider mb-0.5">
-                          {option.highlight}
+              {/* Trust Points */}
+              <div className="flex flex-wrap justify-center gap-2">
+                {product.trustPoints.map((tp) => (
+                  <span
+                    key={tp}
+                    className="text-[11px] font-semibold text-leaf bg-leaf/10 rounded-full px-3 py-1"
+                  >
+                    {tp}
+                  </span>
+                ))}
+              </div>
+
+              {/* Peti highlight box */}
+              <div className="w-full space-y-3">
+                {product.options.map((opt, idx) => (
+                  <div key={idx} className={opt.isBest ? "bg-white rounded-2xl p-3 border border-leaf/20 shadow-sm" : ""}>
+                    {opt.isBest && (
+                      <div className="flex items-center justify-center gap-1.5 mb-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-leaf inline-block" />
+                        <span className="text-[10px] font-bold text-leaf uppercase tracking-widest">
+                          Best Value
                         </span>
-                      )}
-                      <a
-                        href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(option.msg)}`}
-                        className={`w-full py-3.5 rounded-xl font-bold text-sm transition-all ${
-                          isBestValue 
-                            ? "bg-leaf text-white hover:bg-leaf/90" 
-                            : option.highlight
-                              ? "bg-brown text-white hover:bg-brown/90"
-                              : "bg-white text-brown border border-cream hover:bg-cream/10"
-                        }`}
-                      >
-                        {option.label}
-                      </a>
-                    </div>
-                  );
-                })}
+                      </div>
+                    )}
+                    <p className="text-[10px] text-brown/50 font-bold uppercase tracking-wider mb-1.5">
+                      {opt.hint}
+                    </p>
+                    <a
+                      href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t(opt.msgKey))}`}
+                      className={`w-full block py-3.5 rounded-xl font-bold text-sm transition-all text-center ${opt.style}`}
+                    >
+                      {opt.label}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
+
+        {/* Bottom nudge */}
+        <p className="text-center text-brown/50 text-xs mt-10 font-medium">
+          💬 Not sure what to order? Just ask on WhatsApp — we&apos;ll help you pick the right one.
+        </p>
       </div>
     </section>
   );

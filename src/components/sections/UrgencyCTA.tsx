@@ -19,7 +19,7 @@ export default function UrgencyCTA() {
           
           <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto gap-6 sm:gap-8">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-brown leading-tight tracking-tight">
-              {t('urgency.title')}
+              🥭 {t('urgency.title')}
             </h2>
             
             <p className="text-lg md:text-2xl lg:text-3xl text-brown/90 font-medium md:leading-relaxed">

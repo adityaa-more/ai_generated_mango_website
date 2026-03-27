@@ -19,7 +19,7 @@ export default function HowItWorks() {
     <section id="how" className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('howItWorks.title')}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">📦 {t('howItWorks.title')}</h2>
           <p className="text-brown/70 max-w-xl mx-auto">{t('howItWorks.subtitle')}</p>
         </div>
         
